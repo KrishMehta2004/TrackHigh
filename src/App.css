@@ -1,0 +1,159 @@
+/* Global styles to match Streamlit appearance */
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0F172A;
+  color: #E2E8F0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 34, 45, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(165, 180, 252, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(165, 180, 252, 0.5);
+}
+
+/* Stock card animations */
+.stock-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 24px rgba(30,34,45,0.10);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+}
+
+.stock-card:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 8px 32px rgba(30,34,45,0.18);
+}
+
+/* Metric container hover effects */
+.metric-container {
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(30,34,45,0.10);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.metric-container:hover {
+  background-color: rgba(30, 34, 45, 1) !important;
+}
+
+.metric-container-hover:hover {
+  background-color: rgba(51, 65, 85, 0.98) !important;
+  box-shadow: 0 6px 24px rgba(30,34,45,0.18) !important;
+  transform: scale(1.03);
+}
+
+.about-section-hover:hover,
+.price-section-hover:hover {
+  background-color: rgba(51, 65, 85, 0.98) !important;
+  box-shadow: 0 6px 24px rgba(30,34,45,0.18) !important;
+  transform: scale(1.03);
+}
+
+/* Custom button styles */
+.MuiButton-root {
+  text-transform: none !important;
+  border-radius: 8px !important;
+}
+
+/* Custom input styles */
+.MuiOutlinedInput-root {
+  border-radius: 8px !important;
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(148, 163, 184, 0.3) !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(165, 180, 252, 0.5) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #A5B4FC !important;
+}
+
+/* Custom select styles */
+.MuiSelect-select {
+  color: #E2E8F0 !important;
+}
+
+.MuiMenuItem-root {
+  color: #E2E8F0 !important;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: rgba(165, 180, 252, 0.1) !important;
+}
+
+/* Custom radio button styles */
+.MuiRadio-root {
+  color: rgba(165, 180, 252, 0.7) !important;
+}
+
+.MuiRadio-root.Mui-checked {
+  color: #A5B4FC !important;
+}
+
+/* Custom typography */
+.dashboard-title {
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  color: #f9fafb !important;
+  display: flex !important;
+  align-items: center !important;
+  letter-spacing: 0.5px;
+}
+
+/* Typography tweaks */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 700;
+  color: #A5B4FC;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .stock-card {
+    margin-bottom: 16px;
+  }
+  
+  .dashboard-title {
+    font-size: 2rem !important;
+  }
+}
